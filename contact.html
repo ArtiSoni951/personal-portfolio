@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Arti Soni</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header (optional) -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Arti Soni</h1>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-container">
+    <h2>📞 Contact Me</h2>
+    <form action="https://formsubmit.co/artisoni12.10.2003@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    
+      <!-- ✅ Disable CAPTCHA (optional) -->
+      <input type="hidden" name="_captcha" value="false">
+    
+      <!-- ✅ Redirect to your live contact page -->
+      <input type="hidden" name="_next" value="https://www.linkedin.com/in/artisoni2003/">
+    
+      <button type="submit">Send Message</button>
+    </form>
+    <!-- ✅ Thank-you message (initially hidden) -->
+<div id="thank-you-message" style="display:none; color: green; font-weight: bold; margin-top: 1rem;">
+  ✅ Thanks! Your message has been sent.
+</div>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Arti Soni. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if (window.location.search.includes("success=1")) {
+      document.getElementById("thank-you-message").style.display = "block";
+    }
+  </script>
+  
+  
+  
+</body>
+</html>
